@@ -1,20 +1,28 @@
+const { re } = require("semver");
+
 class GuessingGame {
-    constructor() {}
+    constructor(){
+        this.min = null;
+        this.max = null; 
+        this.currentGuess = null; 
+    }
 
     setRange(min, max) {
-
+        this.min = min;
+        this.max = max; 
     }
 
     guess() {
-
+        this.currentGuess = Math.round((this.max + this.min) / 2);
+        return this.currentGuess;
     }
 
     lower() {
-
+         this.max = this.currentGuess;  
     }
 
     greater() {
-
+        this.min = this.currentGuess;
     }
 }
 

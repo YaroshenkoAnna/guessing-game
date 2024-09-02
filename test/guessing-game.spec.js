@@ -11,7 +11,8 @@ describe('#guess', () => {
         let result = game.guess();
         game.lower();
         result = game.guess();
-        game.lower();
+       
+        
         result = game.guess();
         game.lower();
         result = game.guess();
